@@ -9,11 +9,11 @@ Vue.use(Vuex)
 
 const store = new Vuex.Store({
   modules: {
-    app,
-    settings,
-    user
+    app, // 管理侧边栏
+    settings, // 全局设置样式
+    user // 用户信息
   },
-  getters
+  getters // 快捷访问
 })
 
 export default store

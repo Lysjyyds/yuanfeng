@@ -2,28 +2,31 @@
   <div class="navbar">
     <hamburger :is-active="sidebar.opened" class="hamburger-container" @toggleClick="toggleSideBar" />
 
-    <breadcrumb class="breadcrumb-container" />
+<!--    <breadcrumb class="breadcrumb-container" />-->
+    <div class="app-breadcrumb">
+      <span class="breadBtn">工作台</span>
+    </div>
 
     <div class="right-menu">
       <el-dropdown class="avatar-container" trigger="click">
         <div class="avatar-wrapper">
-          <img :src="avatar+'?imageView2/1/w/80/h/80'" class="user-avatar">
-          <i class="el-icon-caret-bottom" />
+          <img src="http://www-wms-java.itheima.net/img/avatar@2x.4f4a758f.png" class="user-avatar">
+          <i class="el-icon-caret-bottom" style="color:#ffb200" />
         </div>
         <el-dropdown-menu slot="dropdown" class="user-dropdown">
           <router-link to="/">
             <el-dropdown-item>
-              Home
+              <i class="el-icon-back">关闭左侧</i>
+            </el-dropdown-item>
+            <el-dropdown-item>
+              <i class="el-icon-right">关闭右侧</i>
             </el-dropdown-item>
           </router-link>
-          <a target="_blank" href="https://github.com/PanJiaChen/vue-admin-template/">
-            <el-dropdown-item>Github</el-dropdown-item>
-          </a>
-          <a target="_blank" href="https://panjiachen.github.io/vue-element-admin-site/#/">
-            <el-dropdown-item>Docs</el-dropdown-item>
+          <a target="_blank" href="https://gitee.com/shuiruohanyu/hrsaas53">
+            <el-dropdown-item><i class="el-icon-close">关闭其他</i></el-dropdown-item>
           </a>
           <el-dropdown-item divided @click.native="logout">
-            <span style="display:block;">Log Out</span>
+            <span style="display:block;"><i class="el-icon-delete">关闭全部</i></span>
           </el-dropdown-item>
         </el-dropdown-menu>
       </el-dropdown>
@@ -60,11 +63,32 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
+.user-avatar {
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  border-radius: 15px;
+  vertical-align: middle;
+
+}
+//.name {
+//  color: purple;
+//  vertical-align: middle;
+//  margin-left:5px;
+//}
+.user-dropdown {
+  color: #fff;
+}
+
+.el-icon-caret-bottom{
+  color:#fff;
+}
 .navbar {
   height: 50px;
   overflow: hidden;
   position: relative;
-  background: #fff;
+  background: -webkit-linear-gradient(bottom, #75147c, #7f44be);
   box-shadow: 0 1px 4px rgba(0,21,41,.08);
 
   .hamburger-container {
@@ -76,7 +100,7 @@ export default {
     -webkit-tap-highlight-color:transparent;
 
     &:hover {
-      background: rgba(0, 0, 0, .025)
+      background: #ffb200
     }
   }
 
@@ -133,6 +157,41 @@ export default {
           font-size: 12px;
         }
       }
+    }
+  }
+
+  .app-breadcrumb {
+    display: inline-block;
+    font-size: 18px;
+    line-height: 50px;
+    margin-left: 10px;
+    color: #ffffff;
+    cursor: text;
+    .breadBtn {
+      background: #fff;
+      font-size: 14px;
+      padding: 0 10px;
+      display: inline-block;
+      height: 30px;
+      line-height: 30px;
+      border-radius: 10px;
+      margin-left: 15px;
+      color: #ffb200;
+      //display: inline-block;
+      //position: relative;
+      //cursor: pointer;
+      //height: 36px;
+      //background: #fff;
+      //border-radius: 6px;
+      //line-height: 36px;
+      //color: #b5abab;
+      //padding: 0 9px 0 15px;
+      //font-size: 13px;
+      //margin-left: 10px;
+      //margin-top: 14px;
+      //margin-bottom: 14px;
+      //font-weight: 400;
+      //font-family: PingFangSC,PingFangSC-Regular;
     }
   }
 }

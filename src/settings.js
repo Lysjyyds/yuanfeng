@@ -1,6 +1,6 @@
 module.exports = {
 
-  title: 'Vue Admin Template', // 项目头部
+  title: '元峰', // 项目头部
 
   /**
    * @type {boolean} true | false
@@ -12,5 +12,5 @@ module.exports = {
    * @type {boolean} true | false
    * @description Whether show the logo in sidebar
    */
-  sidebarLogo: false // 是否显示logo
+  sidebarLogo: true // 是否显示logo
 }
