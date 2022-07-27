@@ -14,7 +14,7 @@
             ref="username"
             v-model="loginForm.username"
             class="loginInput"
-            placeholder="请输入手机号"
+            placeholder="请输入内容"
             name="username"
             type="text"
             tabindex="1"
@@ -68,12 +68,22 @@ export default {
   data() {
     return {
       loginForm: {
-        username: '老艺术家',
+        username: '老艺术家', // 接口需要的字段名
         password: '111111'
       },
       loginRules: {
-        username: [{ required: true, trigger: 'blur', message: '手机号不能为空' }],
-        password: [{ required: true, trigger: 'blur', message: '密码不能为空' }]
+        username: [{ required: true, trigger: 'blur', message: '请输入账号' }, {
+          min: 3,
+          max: 16,
+          message: '账号格式不正确',
+          trigger: 'blur' // 失去焦点
+        }],
+        password: [{ required: true, trigger: 'blur', message: '请输入密码' }, {
+          min: 6,
+          max: 16,
+          message: '密码格式不正确',
+          trigger: 'blur' // 失去焦点
+        }]
       },
       loading: false,
       passwordType: 'password',
@@ -303,3 +313,4 @@ $light_gray:#eee;
   }
 }
 </style>
+

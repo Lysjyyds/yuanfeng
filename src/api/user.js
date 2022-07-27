@@ -1,13 +1,15 @@
-import request from '@/utils/request'
+// import request from '@/utils/request'
 
-export function login(data) {
+// export function getTodo() {
+//   return request({
+//     url: '/home/todo'
+//   })
+// }
 
-}
+// export function getInfo(token) {
 
-export function getInfo(token) {
+// }
 
-}
+// export function logout() {
 
-export function logout() {
-
-}
+// }

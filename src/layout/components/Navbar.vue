@@ -1,8 +1,8 @@
 <template>
   <div class="navbar">
-    <hamburger :is-active="sidebar.opened" class="hamburger-container" @toggleClick="toggleSideBar" />
+        <hamburger :is-active="sidebar.opened" class="hamburger-container" @toggleClick="toggleSideBar" />
 
-<!--    <breadcrumb class="breadcrumb-container" />-->
+        <breadcrumb class="breadcrumb-container" />
     <div class="app-breadcrumb">
       <span class="breadBtn">工作台</span>
     </div>
